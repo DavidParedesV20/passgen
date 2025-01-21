@@ -1,22 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transformador Futurista</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="container">
-        <h1>Transformador Futurista</h1>
-        <input type="text" id="wordInput" placeholder="Escribe una palabra...">
-        <button id="transformButton">Transformar</button>
-        <p id="result"></p>
-    </div>
-    <script src="script.js"></script>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,8 +11,18 @@
         <h1>Transformador Futurista</h1>
         <input type="text" id="wordInput" placeholder="Escribe una palabra...">
         <button id="transformButton">Transformar</button>
-        <button id="copyButton">Copiar</button>
         <p id="result"></p>
+        <div class="patterns">
+            <h2>Patrones de Transformación:</h2>
+            <ul>
+                <li>La primera letra siempre se transforma a mayúscula.</li>
+                <li>Las letras "a" (con o sin tilde) se reemplazan por "@" (excepto si es la primera letra).</li>
+                <li>Las letras "o" (con o sin tilde) se reemplazan por "0" (excepto si es la primera letra).</li>
+                <li>Si la palabra tiene menos de 5 letras, se añade "P@gin@" al inicio.</li>
+                <li>Se elimina cualquier espacio en blanco de la palabra transformada.</li>
+                <li>Al final de la palabra transformada, siempre se añade "00".</li>
+            </ul>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
