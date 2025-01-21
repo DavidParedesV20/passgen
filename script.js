@@ -1,4 +1,5 @@
 // Archivo script.js
+
 document.getElementById("transformButton").addEventListener("click", () => {
     const input = document.getElementById("wordInput").value;
     let transformedWord = "";
@@ -7,7 +8,9 @@ document.getElementById("transformButton").addEventListener("click", () => {
     const normalizedInput = input.normalize("NFD").replace(/\p{Diacritic}/gu, "");
 
     if (normalizedInput.length < 5) {
-        transformedWord = `P@gin@${normalizedInput.replace(/a/gi, "@").replace(/o/gi, "0")}00`;
+        // Si la palabra tiene menos de 5 letras, convertir a minúsculas y añadir "P@gin@"
+        const lowercaseInput = normalizedInput.toLowerCase();
+        transformedWord = `P@gin@${lowercaseInput.replace(/a/gi, "@").replace(/o/gi, "0")}00`;
     } else {
         const firstChar = normalizedInput[0];
         let restOfWord = normalizedInput.slice(1)
